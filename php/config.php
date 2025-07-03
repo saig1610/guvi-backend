@@ -1,11 +1,8 @@
 <?php
-// ✅ Allow frontend from Render
-header("Access-Control-Allow-Origin: *");
-
-$host = "sql312.infinityfree.com";
-$dbname = "if0_39380593_guvi";
-$username = "if0_39380593";
-$password = "04BAAPxnPu";
+$host = "sql311.infinityfree.com";          // ✅ MySQL Hostname
+$dbname = "if0_39380593_guvi";              // ✅ Exact DB name
+$username = "if0_39380593";                 // ✅ MySQL Username
+$password = "04BAAPxnPu";                   // ✅ MySQL Password
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
@@ -18,4 +15,3 @@ try {
     ]);
     exit;
 }
-?>
