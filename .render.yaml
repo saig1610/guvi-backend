@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: guvi-backend
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
