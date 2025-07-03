@@ -1,8 +1,8 @@
 <?php
-$host = "sql311.infinityfree.com";          // ✅ MySQL Hostname
-$dbname = "if0_39380593_guvi";              // ✅ Exact DB name
-$username = "if0_39380593";                 // ✅ MySQL Username
-$password = "04BAAPxnPu";                   // ✅ MySQL Password
+$host = "sql12.freesqldatabase.com";      // ✅ Host
+$dbname = "sql12788193";                  // ✅ Database name
+$username = "sql12788193";                // ✅ Username
+$password = "VakMUL3T1P";                 // ✅ Password from email
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
@@ -11,7 +11,9 @@ try {
     header('Content-Type: application/json');
     echo json_encode([
         "success" => false,
-        "message" => "DB connection failed"
+        "message" => "DB connection failed",
+        "error" => $e->getMessage() // you can remove this later
     ]);
     exit;
 }
+?>
