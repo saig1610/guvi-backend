@@ -1,11 +1,9 @@
-# Use the official PHP + Apache image
 FROM php:8.1-apache
 
-# Install required PHP extensions
-RUN docker-php-ext-install pdo pdo_mysql
+# Copy all files inside php/ folder into Apache's web root
+COPY php/ /var/www/html/
 
-# Copy all files in your repo to the Apache web root
-COPY . /var/www/html/
-
-# Enable Apache rewrite module (if needed)
+# Optional but useful if you add `.htaccess` later
 RUN a2enmod rewrite
+
+EXPOSE 80
